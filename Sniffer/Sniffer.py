@@ -1,4 +1,3 @@
-
 import os
 import socket
 import sys
@@ -12,27 +11,30 @@ def sniff(host):
             socket_protocol = socket.IPPROTO_IP
         else:
             socket_protocol = socket.IPPROTO_ICMP
-
+        
         sniffer = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket_protocol)
         sniffer.bind((host, 0))
         sniffer.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
 
         if os.name == 'nt':
- 
+
             sniffer.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
+
         try:
             while True:
+                
                 # read a packet
                 raw_buffer = sniffer.recvfrom(65535)[0]
                 # create an IP header from the first 20 bytes
                 ip_header = IP(raw_buffer[0:20])
                 # print the detected protocol and hosts
-                print('Protocol: %s %s -> %s' % (ip_header.protocol,
+                print('Protocol: %s %s -> %s' % (ip_header.protocol_map,
                 ip_header.src_address,
                 ip_header.dst_address))
                 print(ip_header.tos)
-                print(ip_src)
+                print(ip_header.src_address)
                 print(ip_header.sum)
+                
  
  
         except KeyboardInterrupt:
