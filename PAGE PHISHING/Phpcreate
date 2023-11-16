@@ -1,0 +1,9 @@
+<?php
+// Exemple de données extraites (remplacer par les vraies données)
+$liens = ["https://lien1.com", "https://lien2.com", "https://lien3.com"];
+
+// Afficher les liens
+foreach ($liens as $lien) {
+    echo "<a href='$lien'>$lien</a><br>";
+}
+?>

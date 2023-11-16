@@ -1,0 +1,16 @@
+import mechanize 
+
+def viewPage(url):
+    browser = mechanize.Browser()
+    page = browser.open(url)
+    print("*" * 15 + " PAGE HTML " + "*" * 15)
+    source_code = page.read()
+    print (source_code)
+    print("*" * 15 + " END PAGE HTML " + "*" * 15)
+    print("*" * 15 + " FORUM " + "*" * 15)
+    browser.select_form(name="form1")
+    print (browser.form)
+    print("*" * 15 + " END FORUM " + "*" * 15)
+
+viewPage("http://testphp.vulnweb.com/signup.php")
+

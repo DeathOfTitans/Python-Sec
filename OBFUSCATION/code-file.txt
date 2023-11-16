@@ -1,0 +1,7 @@
+Hello world ! 
+
+ceci est un simple test pour savoir si l'obfuscation du code est opérationnel.
+
+Bon, si on arrive jusque là... c'est que ça doit fonctionner ? 
+
+Non ? ... Bah il semblerait que si ! 

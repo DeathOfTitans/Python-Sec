@@ -1,0 +1,176 @@
+#stripe-form {
+	margin-top: 10px;
+}
+.stripe-form * {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: var(--color-grayscale1);
+}
+.stripe-form strong {
+	font-weight: bold;
+}
+.stripe-form a {
+	color: var(--color-primary-text);
+}
+
+.stripe-form fieldset {
+	border: 1px solid var(--color-grayscale2);
+	padding: 15px;
+	border-radius: 6px;
+	width: 100%;
+	margin-right:
+	auto; margin-left: auto;
+}
+
+.stripe-form fieldset legend {
+	margin: 0 auto;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	width: auto;
+	border: 0;
+}
+
+.stripe-form fieldset legend + * {
+	clear: both;
+}
+
+.stripe-form .form-row {
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0 0 10px;
+}
+
+.stripe-form .field {
+	position: relative;
+	width: 100%;
+}
+
+.stripe-form .field + .field {
+	margin-left: 10px;
+}
+
+.stripe-form label {
+	width: 100%;
+	font-size: 13px;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 0;
+	line-height: normal;
+}
+
+.stripe-form .input {
+	width: 100%;
+	color: #fff;
+	background: transparent;
+	padding: 5px 0 6px 0;
+	border-bottom: 1px solid darkgrey;
+	transition: border-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.stripe-form .input::-webkit-input-placeholder {
+	color: var(--color-grayscale2);
+}
+
+.stripe-form .input::-moz-placeholder {
+	color: var(--color-grayscale2);
+}
+
+.stripe-form .input:-ms-input-placeholder {
+	color: var(--color-grayscale2);
+}
+
+.stripe-form .input.StripeElement--focus,
+.stripe-form .input:focus {
+	border-color: var(--color-grayscale1);
+}
+.stripe-form .input.StripeElement--invalid {
+	border-color: #ffc7ee;
+}
+
+.stripe-form input:-webkit-autofill,
+.stripe-form select:-webkit-autofill {
+	-webkit-text-fill-color: var(--color-primary-text);
+	transition: background-color 100000000s;
+	-webkit-animation: 1ms void-animation-out;
+}
+
+.stripe-form .StripeElement--webkit-autofill {
+	background: transparent !important;
+}
+
+.stripe-form input,
+.stripe-form button,
+.stripe-form select {
+	-webkit-animation: 1ms void-animation-out;
+	outline: none;
+	border-style: none;
+	border-radius: 0;
+	background-color: inherit;
+}
+
+.stripe-form select.input,
+.stripe-form select:-webkit-autofill {
+	background-image: url('data:image/svg+xml;utf8,<svg width="10px" height="5px" viewBox="0 0 10 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill="#fff" d="M5.35355339,4.64644661 L9.14644661,0.853553391 L9.14644661,0.853553391 C9.34170876,0.658291245 9.34170876,0.341708755 9.14644661,0.146446609 C9.05267842,0.0526784202 8.92550146,-2.43597394e-17 8.79289322,0 L1.20710678,0 L1.20710678,0 C0.930964406,5.07265313e-17 0.707106781,0.223857625 0.707106781,0.5 C0.707106781,0.632608245 0.759785201,0.759785201 0.853553391,0.853553391 L4.64644661,4.64644661 L4.64644661,4.64644661 C4.84170876,4.84170876 5.15829124,4.84170876 5.35355339,4.64644661 Z" id="shape"></path></svg>');
+	background-position: 100%;
+	background-size: 10px 5px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-right: 20px;
+}
+
+.stripe-form button {
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin: 20px 0 0;
+	background-color: var(--color-button-primary);
+	border-radius: 6px;
+	color: #fff;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+.stripe-form button:active {
+	background-color: #cdd0f8;
+}
+
+.stripe-form .error svg .base {
+	fill: #fff;
+}
+
+.stripe-form .error svg .glyph {
+	fill: #9169d8;
+}
+
+.stripe-form .error .message {
+	color: #fff;
+}
+
+.stripe-form .success .icon .border {
+	stroke: #bfaef6;
+}
+
+.stripe-form .success .icon .checkmark {
+	stroke: #fff;
+}
+
+.stripe-form .success .title {
+	color: #fff;
+}
+
+.stripe-form .success .message {
+	color: #cdd0f8;
+}
+
+.stripe-form .success .reset path {
+	fill: #fff;
+}
+
+.stripe-form #card-error span {
+	color: var(--color-red4);
+}
